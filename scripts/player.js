@@ -21,17 +21,45 @@ Quintus.ActionPlatformerPlayer = function(Q) {
 		},
 		//step function is run every frame
 		step:function(){
-			//If the user holds down the left arrow
-			if(Q.inputs['left']){
-				//Log LEFT
-				console.log("LEFT")
-			}
-			//If the user holds down the right arrow
-			else if(Q.inputs['right']){
-				//Makes the character bob up and down when walking right
-				//(but gets stuck under low platforms)
-				// and also makes jumping right much higher than normal..
+		
+			var dualInput = false;
+			
+			//-----------------------------
+			// ←↖↑↗→↘↓↙←
+			//-----------------------------
+			
+			//If the user holds down the up and right arrows together
+			if( Q.inputs.right && Q.inputs.up )
+			{ 
+				console.log("↗"); 
+				dualInput = true; 
+				
+				// Make jumping right much higher than normal.
 				this.entity.p.y -= 2;
+			}
+			
+			if( Q.inputs.right && Q.inputs.down )
+			{ console.log("↘"); dualInput = true; }
+			
+			if( Q.inputs.left && Q.inputs.down )
+			{ console.log("↙"); dualInput = true; }
+			
+			if( Q.inputs.left && Q.inputs.up )
+			{ console.log("↖"); dualInput = true; }
+			
+			if( false === dualInput )
+			{
+				if( Q.inputs.left )
+				{ console.log("←") }
+			
+				if( Q.inputs.right )
+				{ console.log("→") }
+			
+				if( Q.inputs.up )
+				{ console.log("↑") }
+			
+				if( Q.inputs.down )
+				{ console.log("↓") }
 			}
 		}
 	});
