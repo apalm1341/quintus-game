@@ -12,6 +12,8 @@ Quintus.ActionPlatformerPlayer = function(Q) {
 	
 	*/
 
+	// http://www.html5quintus.com/api/classes/Q.Component.html
+	// This component seems to intercept left and right movement and allow them to be modified.
 	Q.component("newControls",{
 		added:function(){
 			//Turn on this function
@@ -26,8 +28,10 @@ Quintus.ActionPlatformerPlayer = function(Q) {
 			}
 			//If the user holds down the right arrow
 			else if(Q.inputs['right']){
-				//Move the entity up 2px;
-				this.entity.p.y-=20;
+				//Makes the character bob up and down when walking right
+				//(but gets stuck under low platforms)
+				// and also makes jumping right much higher than normal..
+				this.entity.p.y -= 2;
 			}
 		}
 	});
@@ -42,7 +46,7 @@ Quintus.ActionPlatformerPlayer = function(Q) {
       });
       this.add("2d, platformerControls");  //this adds 2 different componenets...2d component means there will be gravity/basic physics collision and platformerControls which allows you to move with both keys and touch screen!!!...             
 	  
-	  //this.add("newControls");//Add the new controls create above
+		this.add("newControls");//Add the new controls create above
     //},all
 	
 	// Write event handlers to respond hook into behaviors. ...new line of copied code starts here!
