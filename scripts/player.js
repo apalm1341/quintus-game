@@ -72,21 +72,7 @@ Q.Sprite.extend("Tower", {
   init: function(p) {
     this._super(p, { sheet: 'tower' });
   }
-});
-	/*step:function(){
-		//If the user holds down the left arrow
-		if(Q.inputs['left']){
-			//Log LEFT
-			console.log("LEFT")
-		}
-		//If the user holds down the right arrow
-		else if(Q.inputs['right']){
-			//Move the entity up 2px;
-			this.p.y-=2;
-		}
-	}	
-  });*/
-  
+});  
   
   // To display a game over / game won popup box, 
 // create a endGame scene that takes in a `label` option
