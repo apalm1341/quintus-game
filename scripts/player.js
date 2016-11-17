@@ -53,7 +53,7 @@ Quintus.ActionPlatformerPlayer = function(Q) {
 				{ console.log("←") }
 			
 				if( Q.inputs.right )
-				{ console.log("→") }
+				{ console.log("→"); this.entity.p.y -= 2; }
 			
 				if( Q.inputs.up )
 				{ console.log("↑") }
