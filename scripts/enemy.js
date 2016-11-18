@@ -10,14 +10,16 @@ Quintus.ActionPlatformerEnemy = function(Q) { //new module(ActionPlatformerEnemy
 					Q.state.dec("lives",1);
 					//If the player is at or below 0 lives...couldn't we just say if player at 0? cause it can't get negative can it?
 					if(Q.state.get("lives")<=0){
-						//Q.stageScene("endGame",1 {label: "You Died"});
-						alert("Game Over!"); //this shows box that appears on screen...
-						Q.state.set("lives",3); //this makes lives go back to 3 lives for player!...restarts it to 3 after reaches 0 lives 
+						Q.stageScene("endGame",1, {label: "You Died"});//calls the end game scene from player.js file 
+						//alert("Game Over!"); //this shows box that appears on screen...
+						//Q.state.set("lives",3); //this makes lives go back to 3 lives for player!...restarts it to 3 after reaches 0 lives 
 					}
 					//Q.state.set("lives",3);
 					//Stage the level again.
-					Q.stageScene("level");
-					console.log('you died!'); //Player dies!
+					else
+						Q.stageScene("level"); //reloads the level shown in tmx file!!!//makes ghost go back to original spot it started on screen!
+					
+					console.log('you died!'); //Player dies!shows only in console in chrome dev tools!
 				}
 				//console.log(collision); //allows us to see what we get when collision occurs!
 			});    //wanna listen to certain events so we use "on" in quintus!

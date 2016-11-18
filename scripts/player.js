@@ -106,7 +106,7 @@ Q.Sprite.extend("Tower", {
 // create a endGame scene that takes in a `label` option
 // to control the displayed message.
 Q.scene('endGame',function(stage) {
-  var container = stage.insert(new Q.UI.Container({
+  var container = stage.insert(new Q.UI.Container({//shows whole black image!
     x: Q.width/2, y: Q.height/2, fill: "rgba(0,0,0,0.5)"
   }));
 
@@ -116,9 +116,10 @@ Q.scene('endGame',function(stage) {
                                                    label: stage.options.label }));
   // When the button is clicked, clear all the stages
   // and restart the game.
-  button.on("click",function() {
+  button.on("click",function() {//button of play again
     Q.clearStages();
     Q.stageScene('level');//was level1...changed to level and this should make me be able to fix the issue of pressing play button to restart level!
+	Q.state.set("lives", 3);//sets me back to 3 lives...
   });
 
   // Expand the container to visibily fit it's contents
