@@ -90,8 +90,11 @@ Quintus.ActionPlatformerPlayer = function(Q) {
         //alert('You win!'); //this just makes sharp cornered display box that is white instead of black!!
 		// Remove the player to prevent them from moving
         this.destroy(); //makes ghost/player disappear!!!
+		
+
       }
     }); //need to make it so that after destroying player...u can click button prompting user to go to next level!!!
+	
   }
 });  
 
@@ -105,19 +108,24 @@ Q.Sprite.extend("Tower", {
   // To display a game over / game won popup box, 
 // create a endGame scene that takes in a `label` option
 // to control the displayed message.
-Q.scene('endGame',function(stage) {
+Q.scene('endGame',function(stage) { //endGame is the name of the scene Q (the game) is trying to load
   var container = stage.insert(new Q.UI.Container({//shows whole black image!
     x: Q.width/2, y: Q.height/2, fill: "rgba(0,0,0,0.5)"
   }));
 
   var button = container.insert(new Q.UI.Button({ x: 0, y: 0, fill: "#CCCCCC",
-                                                  label: "Play Again" }))         
+                                                  label: "Play Next Level?" }))         
   var label = container.insert(new Q.UI.Text({x:10, y: -10 - button.p.h, 
                                                    label: stage.options.label }));
   // When the button is clicked, clear all the stages
   // and restart the game.
-  button.on("click",function() {//button of play again
-    Q.clearStages();
+  button.on("click",function() {//button of play again...so in the bit that say button.on("click"... we are dealing with the button in the box that pops up!
+    
+  location.href='http://127.0.0.1:8887/03/github/quintus-game/04/index.html'; // this just lets us go to another level page(in this case level 04!!!)...ok but remeber that the link is for your localhost
+  
+	// below is the code that is supposed to run when you set the scene to a new level on this page
+  
+	Q.clearStages();
     Q.stageScene('level');//was level1...changed to level and this should make me be able to fix the issue of pressing play button to restart level!
 	Q.state.set("lives", 3);//sets me back to 3 lives...
   });

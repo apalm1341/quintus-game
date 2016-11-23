@@ -1,5 +1,5 @@
 window.addEventListener("load",function() {
-  var Q = window.Q = Quintus({development: true})
+  var Q = window.Q = Quintus({development: true}) //Q is game!
     .include("Scenes, Sprites, 2D, Input, Touch, UI, TMX, Audio")
     .include("ActionPlatformerPlayer, ActionPlatformerEnemy") //new module called ActionPlatformerPlayer! and added enemy one cause i had to add enemy file for enemy character...
     .setup({
