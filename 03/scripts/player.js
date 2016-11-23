@@ -1,5 +1,5 @@
 Quintus.ActionPlatformerPlayer = function(Q) {
-  // test
+  
 
 	/*
 		To use the Javascript Console in Chrome, press F12
