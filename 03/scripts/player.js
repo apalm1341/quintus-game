@@ -119,7 +119,7 @@ Q.scene('endGame',function(stage) { //endGame is the name of the scene Q (the ga
   // When the button is clicked, clear all the stages
   // and restart the game.
   button.on("click",function() {//button of play again...so in the bit that say button.on("click"... we are dealing with the button in the box that pops up!
-    
+    //line below lets us transition to level 04!!!
   location.href='http://127.0.0.1:8887/03/github/quintus-game/04/index.html'; // this just lets us go to another level page(in this case level 04!!!)...ok but remeber that the link is for your localhost
   
 	// below is the code that is supposed to run when you set the scene to a new level on this page
