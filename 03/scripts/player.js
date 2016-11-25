@@ -113,7 +113,7 @@ Q.scene('endGame',function(stage) { //endGame is the name of the scene Q (the ga
   }));
 
   var button = container.insert(new Q.UI.Button({ x: 0, y: 0, fill: "#CCCCCC",
-                                                  label: "Play Next Level?" }))         
+                                                  label: "Play Next Level?" }))  //added this label for description inside button for when u reach door!!!       
   var label = container.insert(new Q.UI.Text({x:10, y: -10 - button.p.h, 
                                                    label: stage.options.label }));
   // When the button is clicked, clear all the stages
