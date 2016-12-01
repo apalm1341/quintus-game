@@ -8,7 +8,6 @@
 	"player":{"sx":25,"sy":2,"cols":1,"tilew":17,"frames":1,"tileh":21},
 	"power":{"sx":146,"sy":2,"cols":1,"tilew":15,"frames":1,"tileh":13},
 	"red-alien":{"sx":84,"sy":2,"cols":1,"tilew":19,"frames":1,"tileh":19},	
-	"yellow-alien":{"sx":63,"sy":2,"cols":1,"tilew":19,"frames":1,"tileh":19},
-	"tower":{"sx":186,"sy":2,"cols":1,"tilew":21,"frames":1,"tileh":27}
+	"yellow-alien":{"sx":63,"sy":2,"cols":1,"tilew":19,"frames":1,"tileh":19}
 }
 	
