@@ -18,6 +18,26 @@ window.addEventListener("load",function() {
       stage.add("viewport").follow(player, {x: true, y: true});
     });
 
+    //Create the Game State
+	Q.state.set({
+		lives:3
+	})
+	
+	//Create a new scene for the Heads up Display
+	Q.scene("hud",function(stage){
+		//Create a container that stores the hud items
+		var cont = stage.insert(new Q.UI.Container({w:Q.width,h:100,fill:"white",opacity:0.5}));
+		console.log(cont);
+		//The text that contains the lives
+		//The label is what is displayed.
+		//Q.state.get("lives") get the number of lives from the gamestate. The label has ""+ because lives is a number and the label has to be a string.
+		var text = cont.insert(new Q.UI.Text({x:10,y:10,label:""+Q.state.get("lives")}));
+		//Listen to the game state for when the lives variable changes
+		Q.state.on("change.lives",text,function(){
+			text.p.label = ""+Q.state.get("lives");
+		});
+	});
+
     //load assets
     Q.loadTMX("small_level.tmx, sprites.json, sprites.png", function() {       
       Q.compileSheets("sprites.png","sprites.json");     
