@@ -44,7 +44,29 @@ window.addEventListener("load",function() {
       Q.stageScene("level");
     });
 });
-        
+
+
+    /*  //The question box sprite.
+	Q.Sprite.extend("QuestionBox",{
+		init:function(p){
+			this._super(p,{
+				//Take the power sheet from sprites.json
+				sheet:"power",
+				//The collision type
+				type:Q.SPRITE_DEFAULT,
+				gravity:0
+			});
+			this.add("2d");
+			//Turn on a function when the sprite is hit from the bottom
+			this.on("bump.bottom",this,"displayText");
+			console.log(this)
+		},
+		displayText:function(col){
+			//Increase the lives by 1
+			Q.state.inc("lives",1);
+		}
+		
+	});  */
         
         
         

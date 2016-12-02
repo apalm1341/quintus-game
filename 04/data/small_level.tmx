@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="21" tileheight="21" nextobjectid="8">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="21" tileheight="21" nextobjectid="10">
  <tileset firstgid="1" name="spritesheet" tilewidth="21" tileheight="21" spacing="2" tilecount="900" columns="30">
   <image source="../images/spritesheet.png" width="692" height="692"/>
   <tile id="19">
@@ -15,6 +15,11 @@
  </tileset>
  <tileset firstgid="901" name="sprites" tilewidth="21" tileheight="21" spacing="2" tilecount="8" columns="8">
   <image source="../images/sprites.png" width="183" height="25"/>
+  <tile id="3">
+   <properties>
+    <property name="Class" value="QuestionBox"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="background1" width="20" height="20">
   <properties>
@@ -1246,5 +1251,7 @@
   <object id="5" gid="446" x="357" y="252" width="21" height="21"/>
   <object id="6" gid="446" x="336" y="252" width="21" height="21"/>
   <object id="7" gid="446" x="42" y="252" width="21" height="21"/>
+  <object id="8" gid="904" x="231" y="147" width="21" height="21"/>
+  <object id="9" gid="904" x="126" y="42" width="21" height="21"/>
  </objectgroup>
 </map>
