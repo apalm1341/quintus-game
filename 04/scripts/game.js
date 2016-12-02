@@ -1,4 +1,4 @@
-window.addEventListener("load",function() {
+window.onload = function() {
   var Q = window.Q = Quintus({development: true})
     .include("Scenes, Sprites, 2D, Input, Touch, UI, TMX, Audio")
     .include("ActionPlatformerPlayer, ActionPlatformerEnemy")
@@ -43,10 +43,10 @@ window.addEventListener("load",function() {
       Q.compileSheets("sprites.png","sprites.json");     
       Q.stageScene("level");
     });
-});
 
 
-    /*  //The question box sprite.
+
+      //The question box sprite.
 	Q.Sprite.extend("QuestionBox",{
 		init:function(p){
 			this._super(p,{
@@ -66,9 +66,9 @@ window.addEventListener("load",function() {
 			Q.state.inc("lives",1);
 		}
 		
-	});  */
+	});  
         
         
-        
+  };      
         
         
